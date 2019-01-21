@@ -1,14 +1,14 @@
 package filtering;
 
 
-import io.reactivex.Observable;
+import rx.Observable;
 import util.DataGenerator;
 
 public class PositionalExampleDistinct {
     
     public static void main(String[] args) {
 
-        Observable.fromIterable(DataGenerator.generateScrambledAndDuppedGreekAlphabet())
+        Observable.from(DataGenerator.generateScrambledAndDuppedGreekAlphabet())
                 .subscribe((letter) -> {
                     System.out.println(letter);
                 });
@@ -17,7 +17,7 @@ public class PositionalExampleDistinct {
         
         // Emit each string value only once, even if it appears in the 
         // original list multiple times.
-        Observable.fromIterable(DataGenerator.generateScrambledAndDuppedGreekAlphabet())
+        Observable.from(DataGenerator.generateScrambledAndDuppedGreekAlphabet())
                 .distinct()
                 .subscribe((letter) -> {
                     System.out.println(letter);

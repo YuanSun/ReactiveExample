@@ -1,6 +1,6 @@
 package filtering;
 
-import com.pluralsight.rxjava.util.DataGenerator;
+import util.DataGenerator;
 import rx.Observable;
 
 public class PositionalExampleFirstAndLast {

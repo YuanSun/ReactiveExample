@@ -9,5 +9,8 @@
         <module name="ObservableExample" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ObservableExample" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

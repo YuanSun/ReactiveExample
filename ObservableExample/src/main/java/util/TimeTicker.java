@@ -1,7 +1,7 @@
 package util;
 
-import io.reactivex.Observable;
-import io.reactivex.subjects.BehaviorSubject;
+import rx.Observable;
+import rx.subjects.BehaviorSubject;
 
 public class TimeTicker {
 
@@ -15,7 +15,7 @@ public class TimeTicker {
     public TimeTicker( long interval ) {
 
         lastTick = System.currentTimeMillis();
-        tickerSubject = BehaviorSubject.createDefault(lastTick);
+        tickerSubject = BehaviorSubject.create(lastTick);
         tickerThread = null;
         paused = false;
         this.interval = interval;
@@ -63,7 +63,7 @@ public class TimeTicker {
             }
             
             // Make sure all subscribers are told that the list is complete
-            tickerSubject.onComplete();
+            tickerSubject.onCompleted();
             
         }, "TickerThread");
         tickerThread.start();

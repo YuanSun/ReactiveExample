@@ -1,7 +1,7 @@
 package creation;
 
-import com.pluralsight.rxjava.util.DataGenerator;
-import com.pluralsight.rxjava.util.ThreadUtils;
+import util.DataGenerator;
+import util.ThreadUtils;
 import java.util.List;
 import rx.Observable;
 
